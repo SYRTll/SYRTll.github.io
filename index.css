@@ -1,22 +1,72 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
-    padding: 20px;
-    margin: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.head {
+    width: 100%;
+    height: 60px;
+    background-color: #d28ef0;
+    margin:0 auto;
+    position: fixed;
+    z-index: 999;
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    margin-top: 0px;
+    background-image: url(bg.jpg);
+}
+
+.foot {
+    background-color: #07c3fc;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    position: fixed;
+    clear: both;
+    z-index: 999;
+}
+.left {
+    float: left;
+    width:300px;
+    height: 160px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #c174e7;
+}
+
+.right {
+    float: left;
+    width:300px;
+    height: 160px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #9ebdf1;
+}
+
+.head > .container {
+    background-color: #59bde7;
+    height: 60px;
 }
 
 img {
-    margin: 10px;
-    padding-left: 220px;
+    padding-left:550px; 
 }
 
 a {
     text-decoration: none;
     color: #05b0ff;
     padding-left: 290px
-}
-
-h1 {
-    text-align: center;
 }
 
 table {
@@ -36,10 +86,36 @@ h3 {
     padding-left: 20px
 }
 
-.container {
-    width: 800px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    margin-top: 0;
-    background-image: url("bg.jpg")
+@media (max-width:960px) {
+    .container {
+        width:100%;
+    }
+    .right {
+        width:100%;
+    }
+    .left {
+        width:100%;
+    }
 }
+
+@keyframes myfirst{
+    from {
+        background: rgb(71, 59, 59);
+    }
+    to {
+        background: rgb(231, 231, 180);
+    }
+    }
+    div{
+    animation: myfirst 5s;
+    -moz-animation: myfirst 5s;
+    -webkit-animation: myfirst 5s;
+    -o-animation: myfirst 5s;
+    }
+    
+    div{
+        transition: width 2s;
+        }
+        div:hover{
+        width:300px;
+        }
